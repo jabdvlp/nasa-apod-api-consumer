@@ -1,5 +1,6 @@
 import requests
 import json
+import webbrowser
 from datetime import date, datetime
 
 date_req = input("Ingrese una fecha específica en formato 'YYYY-MM-DD': " )
@@ -22,4 +23,4 @@ image = response.json()["hdurl"]
 
 print(f"DESCRIPCIÓN: \n {description}")
 print(f"URL DE LA IMAGEN: \n {image}")
-
+webbrowser.open(image)
